@@ -2,7 +2,7 @@ package AllTask.Graph;
 
 public class Graph {
     private int maxN = 10;
-    private int[][] mas;// матириця зміжності де 0 буде казати є періхід далі а 0 ні немає
+    private int[][] mas;// матириця зміжності де 1 буде казати є періхід далі а 0 ні немає
     Vertex [] listVertex;// список вершин
     private int curN;//кількість вершин
     private MyStack stack = new MyStack();
@@ -17,18 +17,18 @@ public class Graph {
     }
     public void addEdge(int start,int end){
         mas[start][end] = 1;
-        mas[end][start] = 0;
+        mas[end][start] = 1;
     }
     public int check(int v){ // возращает не посищеную вершину
         for(int i = 0;i < curN;++i){
             if(mas[v][i] == 1 && listVertex[i].isVisited == false){
-                return 1;
+                return i;
             }
         }
         return -1;
     }
     public void passInDeep(int index){
-        System.out.println(listVertex[index].name);
+        System.out.println(listVertex[index].name);//имя на консоль
         listVertex[index].isVisited = true;
         stack.push(index);
 
