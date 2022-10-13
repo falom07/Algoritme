@@ -2,8 +2,8 @@ package AllTask.OOP;
 
 public class Main {
     public static void main(String[] args) {
-        Man man = new Man(37,"Vita",2,123);
-        Woman woman = new Woman(27,"Nasta",1,123);
+        Person man = new Man(37,"Vita",2,123);
+        Person woman = (Person) new  Woman(27,"Nasta",1,123);
         Child child = new Child(3,"Kiril",3,123);
 
 
@@ -26,8 +26,8 @@ public class Main {
         System.out.println("\n");
 
 
-        man.beFather();//добавление особых методов для разных классов
-        woman.beMother();//добавление особых методов для разных классов
+      // man.beFather();//добавление особых методов для разных классов
+      // woman.beMother();//добавление особых методов для разных классов
         child.goToSchool();//добавление особых методов для разных классов
 
 

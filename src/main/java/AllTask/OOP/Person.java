@@ -22,6 +22,9 @@ public class Person {
     public int getAge() {
         return age;
     }
+    public String getName() {
+        return name;
+    }
     public int  getBloodType(int password){
         if(this.password == password){
             return bloodType;
@@ -37,7 +40,5 @@ public class Person {
         }
     }
 
-    public String getName() {
-        return name;
-    }
+
 }

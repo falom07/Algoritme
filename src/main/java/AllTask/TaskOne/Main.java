@@ -49,7 +49,7 @@ public class Main {
     public static void howMushSteep(int size){
         int next = 1;
         int previous = 0;
-        int steps ;
+
         while(true){
             int nextPow = (int) Math.pow(2,next);
             int previousPow = (int) Math.pow(2,previous);

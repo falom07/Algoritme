@@ -25,7 +25,6 @@ public class Tree {
         if(leftChar != null){
             sum += leftChar.sumDeapthRecourthion();
         }
-
         return sum;
     }
     public static int sumDeapthIteration(Tree object){
